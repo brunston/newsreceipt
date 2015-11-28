@@ -1,3 +1,7 @@
+#custom
+dat/settings.cfg
+dat/logo.png
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
