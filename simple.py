@@ -76,8 +76,8 @@ def generate_rcpt():
     weather_loc = cfg_list[2]
     news_source = cfg_list[3]
     news_source_name = cfg_list[4]
-    headline_source = cfg_list[5]
-    headline_source_name = cfg_list[6]
+    news2_source = cfg_list[5]
+    news2_source_name = cfg_list[6]
 
     #get weather (current and forecast of the day)
     weather_str_current = str('http://api.wunderground.com/api/'+weather_key+\
@@ -96,7 +96,7 @@ def generate_rcpt():
 
     #get news
     news_data = feedparser.parse(news_source)
-    headline_data = feedparser.parse(headline_source)
+    news2_data = feedparser.parse(news2_source)
 
     #header
     with open("news_rcpt_head.txt", "w") as file:
@@ -117,8 +117,12 @@ def generate_rcpt():
 
         file.write("\n\n---News from {0}---\n\n".format(news_source_name))
         for i in range(10):
-            #file.write("[{0}]:".format(i+1) + news_data.entries[i].title + "\n")
-            file.write(news_data.entries[i].description + "\n")
+            file.write("[{0}]:".format(i+1) + news_data.entries[i].title + "\n")
+            #file.write(news_data.entries[i].description + "\n")
+        file.write("\n\n---News from {0}---\n\n".format(news2_source_name))
+        for i in range(10):
+            file.write("[{0}]:".format(i+1) + news2_data.entries[i].title + "\n")
+            #file.write(news_data.entries[i].description + "\n")
 
 def text_setter():
     #makes sure all text will fit on the line, using new line.
