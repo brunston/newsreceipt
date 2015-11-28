@@ -1,6 +1,8 @@
 #custom
 dat/settings.cfg
 dat/logo.png
+news_rcpt.txt
+news_rcpt_head.txt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
