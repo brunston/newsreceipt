@@ -2,7 +2,7 @@
 newsreceipt_simple.py
 Copyright (c) 2015 Brunston Poon/brupoon
 
-Written for RPi and Adafruit Thermal Printer
+Written for Raspberry Pi and Adafruit Thermal Printer
 Some code adapted from iworkinpixels/otp-gen
 (note to self: try PEP8 for functions/classes, etc.)
 """
