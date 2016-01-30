@@ -241,7 +241,5 @@ def main_loop():
 if __name__ == '__main__':
     # generate_rcpt()
     # text_setter()
-    ask = input("Press Enter to Print, any letter to cancel.")
-    if ask == "":
-        tap()
+    tap()
     # main_loop()
